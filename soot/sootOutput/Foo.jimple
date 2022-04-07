@@ -1,0 +1,76 @@
+class Foo extends java.lang.Object
+{
+/*Foo.java*/
+
+/*0*/
+    void <init>()
+    {
+        Foo this;
+
+        this := @this: Foo;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+/*1*/
+/*this has reaching def: this := @this: Foo*/
+
+        return;
+/*1*/
+    }
+
+/*2*/
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+        int rv;
+        Foo $stack3;
+        java.io.PrintStream $stack5;
+
+        args := @parameter0: java.lang.String[];
+
+        $stack3 = new Foo;
+/*3*/
+
+        specialinvoke $stack3.<Foo: void <init>()>();
+/*3*/
+/*$stack3 has reaching def: $stack3 = new Foo*/
+
+        rv = virtualinvoke $stack3.<Foo: int bar(int)>(0);
+/*4*/
+/*4*/
+/*$stack3 has reaching def: $stack3 = new Foo*/
+
+        $stack5 = <java.lang.System: java.io.PrintStream out>;
+/*5*/
+
+        virtualinvoke $stack5.<java.io.PrintStream: void println(int)>(rv);
+/*5*/
+/*rv has reaching def: rv = virtualinvoke $stack3.<Foo: int bar(int)>(0)*/
+/*$stack5 has reaching def: $stack5 = <java.lang.System: java.io.PrintStream out>*/
+
+        return;
+/*6*/
+    }
+
+/*8*/
+    public int bar(int)
+    {
+        Foo this;
+        int x;
+
+        this := @this: Foo;
+
+        x := @parameter0: int;
+
+        if x != 0 goto label1;
+/*9*/
+/*x has reaching def: x := @parameter0: int*/
+
+        goto label1;
+/*10*/
+
+     label1:
+        return x;
+/*14*/
+/*x has reaching def: x := @parameter0: int*/
+    }
+}
