@@ -38,20 +38,10 @@ public class ZeroValueVisitor extends AbstractValueVisitor<ZeroAbstractValue> {
   @Override
   public void visitDivExpression(ZeroAbstractValue leftOperand, ZeroAbstractValue rightOperand) {
     // Tener en cuenta que this.possibleDivisionByZero indica que hay una posible division.
-    if(rightOperand == ZeroAbstractValue.ZERO){
-      resolvedValue = ZeroAbstractValue.BOTTOM;
+    if(rightOperand == ZeroAbstractValue.ZERO || rightOperand == ZeroAbstractValue.MAYBE_ZERO){
       this.possibleDivisionByZero = true;
-      return;
     }
-    else if(rightOperand == ZeroAbstractValue.BOTTOM) {
-      resolvedValue = ZeroAbstractValue.BOTTOM;
-    }
-   else{
-     resolvedValue = leftOperand;
-    }
-    if( rightOperand == ZeroAbstractValue.MAYBE_ZERO){
-      this.possibleDivisionByZero=true;
-    }
+    resolvedValue = leftOperand.divideBy(rightOperand);
   }
   
 
