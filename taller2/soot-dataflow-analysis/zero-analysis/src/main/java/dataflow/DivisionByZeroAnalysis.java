@@ -44,7 +44,7 @@ public class DivisionByZeroAnalysis extends ForwardFlowAnalysis<Unit, ZeroAbstra
       // Set in flowed values
       out.setValue(variable.getName(), resolvedValue);
     }
-    unit.addTag(new StringTag(in.toString()));
+    unit.addTag(new StringTag("In: " + in.toString()));
   }
 
   protected ZeroAbstractSet newInitialFlow() {
@@ -52,7 +52,7 @@ public class DivisionByZeroAnalysis extends ForwardFlowAnalysis<Unit, ZeroAbstra
   }
 
   protected void merge(ZeroAbstractSet input1, ZeroAbstractSet input2, ZeroAbstractSet output) {
-    throw new UnsupportedOperationException();
+    copy(input1.union(input2), output);
   }
 
   protected void copy(ZeroAbstractSet source, ZeroAbstractSet dest) {

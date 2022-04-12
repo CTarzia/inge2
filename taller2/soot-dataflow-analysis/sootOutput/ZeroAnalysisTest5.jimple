@@ -1,0 +1,79 @@
+public class ZeroAnalysisTest5 extends java.lang.Object
+{
+/*ZeroAnalysisTest5.java*/
+
+/*[Ljava.lang.String;@464c37eb*/
+    public static int test5(int)
+    {
+        int y, x, temp$1, temp$2;
+
+        y := @parameter0: int;
+/*Source Line Pos Tag: sline: 3 eline: 3 spos: 28 epos: 32 file: ZeroAnalysisTest5.java*/
+/*In: ZeroAbstractSet{{}}*/
+
+        x = y;
+/*Source Line Pos Tag: sline: 4 eline: 4 spos: 5 epos: 14 file: ZeroAnalysisTest5.java*/
+/*In: ZeroAbstractSet{{y=maybe-zero}}*/
+
+        y = 1;
+/*Source Line Pos Tag: sline: 5 eline: 5 spos: 5 epos: 5 file: ZeroAnalysisTest5.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero, y=maybe-zero}}*/
+
+     label1:
+        if x != 1 goto label2;
+/*Source Line Pos Tag: sline: 6 eline: 6 spos: 12 epos: 15 file: ZeroAnalysisTest5.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero, y=not-zero}}*/
+/*In: ZeroAbstractSet{{x=maybe-zero, y=maybe-zero, temp$1=maybe-zero, temp$2=maybe-zero}}*/
+
+        goto label3;
+/*Source Line Pos Tag: sline: 6 eline: 6 spos: 12 epos: 15 file: ZeroAnalysisTest5.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero, y=maybe-zero, temp$1=maybe-zero, temp$2=maybe-zero}}*/
+
+     label2:
+        temp$1 = x * y;
+/*Source Line Pos Tag: sline: 7 eline: 7 spos: 7 epos: 12 file: ZeroAnalysisTest5.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero, y=not-zero}}*/
+/*In: ZeroAbstractSet{{x=maybe-zero, y=maybe-zero, temp$1=maybe-zero, temp$2=maybe-zero}}*/
+
+        y = temp$1;
+/*Source Line Pos Tag: sline: 7 eline: 7 spos: 7 epos: 7 file: ZeroAnalysisTest5.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero, y=not-zero, temp$1=maybe-zero}}*/
+/*In: ZeroAbstractSet{{x=maybe-zero, y=maybe-zero, temp$1=maybe-zero, temp$2=maybe-zero}}*/
+
+        temp$2 = x - 1;
+/*Source Line Pos Tag: sline: 8 eline: 8 spos: 7 epos: 12 file: ZeroAnalysisTest5.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero, y=maybe-zero, temp$1=maybe-zero}}*/
+/*In: ZeroAbstractSet{{x=maybe-zero, y=maybe-zero, temp$1=maybe-zero, temp$2=maybe-zero}}*/
+
+        x = temp$2;
+/*Source Line Pos Tag: sline: 8 eline: 8 spos: 7 epos: 7 file: ZeroAnalysisTest5.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero, y=maybe-zero, temp$1=maybe-zero, temp$2=maybe-zero}}*/
+
+        goto label1;
+/*Source Line Pos Tag: sline: 6 eline: 9 spos: 5 epos: 5 file: ZeroAnalysisTest5.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero, y=maybe-zero, temp$1=maybe-zero, temp$2=maybe-zero}}*/
+
+     label3:
+        return y;
+/*Source Line Pos Tag: sline: 10 eline: 10 spos: 5 epos: 13 file: ZeroAnalysisTest5.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero, y=maybe-zero, temp$1=maybe-zero, temp$2=maybe-zero}}*/
+    }
+
+/*[Ljava.lang.String;@6e739301*/
+    public void <init>()
+    {
+        ZeroAnalysisTest5 this;
+
+        this := @this: ZeroAnalysisTest5;
+/*2*/
+/*In: ZeroAbstractSet{{}}*/
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+/*2*/
+/*In: ZeroAbstractSet{{}}*/
+
+        return;
+/*2*/
+/*In: ZeroAbstractSet{{}}*/
+    }
+}

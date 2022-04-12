@@ -1,0 +1,49 @@
+public class ZeroAnalysisTest1 extends java.lang.Object
+{
+/*ZeroAnalysisTest1.java*/
+
+/*[Ljava.lang.String;@685b9626*/
+    public static int test1(int, int)
+    {
+        int m, n, temp$0, temp$1;
+
+        m := @parameter0: int;
+/*Source Line Pos Tag: sline: 2 eline: 2 spos: 26 epos: 30 file: ZeroAnalysisTest1.java*/
+/*In: ZeroAbstractSet{{}}*/
+
+        n := @parameter1: int;
+/*Source Line Pos Tag: sline: 2 eline: 2 spos: 33 epos: 37 file: ZeroAnalysisTest1.java*/
+/*In: ZeroAbstractSet{{m=maybe-zero}}*/
+
+        temp$0 = 0 * n;
+/*Source Line Pos Tag: sline: 4 eline: 4 spos: 5 epos: 18 file: ZeroAnalysisTest1.java*/
+/*In: ZeroAbstractSet{{m=maybe-zero, n=maybe-zero}}*/
+
+        temp$1 = m / temp$0;
+/*Source Line Pos Tag: sline: 5 eline: 5 spos: 5 epos: 18 file: ZeroAnalysisTest1.java*/
+/*In: ZeroAbstractSet{{temp$0=zero, m=maybe-zero, n=maybe-zero}}*/
+/*Possible division by zero here*/
+
+        return temp$1;
+/*Source Line Pos Tag: sline: 6 eline: 6 spos: 5 epos: 13 file: ZeroAnalysisTest1.java*/
+/*In: ZeroAbstractSet{{temp$0=zero, m=maybe-zero, temp$1=bottom, n=maybe-zero}}*/
+    }
+
+/*[Ljava.lang.String;@182ae8c1*/
+    public void <init>()
+    {
+        ZeroAnalysisTest1 this;
+
+        this := @this: ZeroAnalysisTest1;
+/*1*/
+/*In: ZeroAbstractSet{{}}*/
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+/*1*/
+/*In: ZeroAbstractSet{{}}*/
+
+        return;
+/*1*/
+/*In: ZeroAbstractSet{{}}*/
+    }
+}

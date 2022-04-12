@@ -1,0 +1,62 @@
+public class ZeroAnalysisTest6 extends java.lang.Object
+{
+/*ZeroAnalysisTest6.java*/
+
+/*[Ljava.lang.String;@16e4d29b*/
+    public static int test6(int)
+    {
+        int x, y, temp$2;
+
+        x := @parameter0: int;
+/*Source Line Pos Tag: sline: 3 eline: 3 spos: 28 epos: 32 file: ZeroAnalysisTest6.java*/
+/*In: ZeroAbstractSet{{}}*/
+
+        if x == 0 goto label1;
+/*Source Line Pos Tag: sline: 5 eline: 5 spos: 9 epos: 12 file: ZeroAnalysisTest6.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero}}*/
+
+        goto label2;
+/*Source Line Pos Tag: sline: 5 eline: 5 spos: 9 epos: 12 file: ZeroAnalysisTest6.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero}}*/
+
+     label1:
+        y = 1;
+/*Source Line Pos Tag: sline: 6 eline: 6 spos: 8 epos: 8 file: ZeroAnalysisTest6.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero}}*/
+
+        goto label3;
+/*Source Line Pos Tag: sline: 5 eline: 9 spos: 5 epos: 5 file: ZeroAnalysisTest6.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero, y=not-zero}}*/
+
+     label2:
+        y = 2;
+/*Source Line Pos Tag: sline: 8 eline: 8 spos: 7 epos: 7 file: ZeroAnalysisTest6.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero}}*/
+
+     label3:
+        temp$2 = x / y;
+/*Source Line Pos Tag: sline: 10 eline: 10 spos: 5 epos: 15 file: ZeroAnalysisTest6.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero, y=not-zero}}*/
+
+        return temp$2;
+/*Source Line Pos Tag: sline: 11 eline: 11 spos: 5 epos: 13 file: ZeroAnalysisTest6.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero, y=not-zero, temp$2=maybe-zero}}*/
+    }
+/*[Ljava.lang.String;@10f8b89d*/
+    public void <init>()
+    {
+        ZeroAnalysisTest6 this;
+
+        this := @this: ZeroAnalysisTest6;
+/*2*/
+/*In: ZeroAbstractSet{{}}*/
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+/*2*/
+/*In: ZeroAbstractSet{{}}*/
+
+        return;
+/*2*/
+/*In: ZeroAbstractSet{{}}*/
+    }
+}

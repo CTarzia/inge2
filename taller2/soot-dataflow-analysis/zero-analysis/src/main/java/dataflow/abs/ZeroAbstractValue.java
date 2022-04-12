@@ -37,7 +37,7 @@ public enum ZeroAbstractValue {
     else if(another == ZERO || this == ZERO){
       return ZERO;
     }
-    else if( another == NOT_ZERO || this == NOT_ZERO){
+    else if( another == NOT_ZERO && this == NOT_ZERO){
       return NOT_ZERO;
     }
     else{
@@ -50,8 +50,11 @@ public enum ZeroAbstractValue {
   }
 
   public ZeroAbstractValue merge(ZeroAbstractValue another) {
-    if(this == BOTTOM || another == BOTTOM){
-      return BOTTOM;
+    if(this == BOTTOM) {
+      return another;
+    }
+    else if (another == BOTTOM) {
+      return this;
     }
     else if( another == MAYBE_ZERO || this == MAYBE_ZERO){
       return MAYBE_ZERO;

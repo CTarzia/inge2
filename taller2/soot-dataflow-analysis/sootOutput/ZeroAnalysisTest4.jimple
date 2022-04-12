@@ -1,0 +1,68 @@
+public class ZeroAnalysisTest4 extends java.lang.Object
+{
+/*ZeroAnalysisTest4.java*/
+
+/*[Ljava.lang.String;@42a04426*/
+    public static int test4(int, int)
+    {
+        int m, n, x, temp$1;
+
+        m := @parameter0: int;
+/*Source Line Pos Tag: sline: 2 eline: 2 spos: 27 epos: 31 file: ZeroAnalysisTest4.java*/
+/*In: ZeroAbstractSet{{}}*/
+
+        n := @parameter1: int;
+/*Source Line Pos Tag: sline: 2 eline: 2 spos: 34 epos: 38 file: ZeroAnalysisTest4.java*/
+/*In: ZeroAbstractSet{{m=maybe-zero}}*/
+
+        if m != 0 goto label1;
+/*Source Line Pos Tag: sline: 4 eline: 4 spos: 9 epos: 14 file: ZeroAnalysisTest4.java*/
+/*In: ZeroAbstractSet{{m=maybe-zero, n=maybe-zero}}*/
+
+        goto label2;
+/*Source Line Pos Tag: sline: 4 eline: 4 spos: 9 epos: 14 file: ZeroAnalysisTest4.java*/
+/*In: ZeroAbstractSet{{m=maybe-zero, n=maybe-zero}}*/
+
+     label1:
+        x = m;
+/*Source Line Pos Tag: sline: 5 eline: 5 spos: 7 epos: 7 file: ZeroAnalysisTest4.java*/
+/*In: ZeroAbstractSet{{m=maybe-zero, n=maybe-zero}}*/
+
+        goto label3;
+/*Source Line Pos Tag: sline: 4 eline: 8 spos: 5 epos: 5 file: ZeroAnalysisTest4.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero, m=maybe-zero, n=maybe-zero}}*/
+
+     label2:
+        x = 1;
+/*Source Line Pos Tag: sline: 7 eline: 7 spos: 7 epos: 7 file: ZeroAnalysisTest4.java*/
+/*In: ZeroAbstractSet{{m=maybe-zero, n=maybe-zero}}*/
+
+     label3:
+        temp$1 = n / x;
+/*Source Line Pos Tag: sline: 9 eline: 9 spos: 5 epos: 18 file: ZeroAnalysisTest4.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero, m=maybe-zero, n=maybe-zero}}*/
+/*Possible division by zero here*/
+
+        return temp$1;
+/*Source Line Pos Tag: sline: 10 eline: 10 spos: 5 epos: 13 file: ZeroAnalysisTest4.java*/
+/*In: ZeroAbstractSet{{x=maybe-zero, m=maybe-zero, temp$1=maybe-zero, n=maybe-zero}}*/
+    }
+
+/*[Ljava.lang.String;@5d8cee35*/
+    public void <init>()
+    {
+        ZeroAnalysisTest4 this;
+
+        this := @this: ZeroAnalysisTest4;
+/*1*/
+/*In: ZeroAbstractSet{{}}*/
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+/*1*/
+/*In: ZeroAbstractSet{{}}*/
+
+        return;
+/*1*/
+/*In: ZeroAbstractSet{{}}*/
+    }
+}
